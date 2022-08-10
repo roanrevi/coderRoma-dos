@@ -43,46 +43,35 @@ main{
     "vision vision vision . ."
     ". . objetivos objetivos objetivos";
     color: $font-ppal;
+    
 
     /* definiendo areas */
 .n1{
     grid-area: mision;
-    width: 70%;
-    margin: auto;
-    text-align: justify;
-    padding:1rem 2rem;
-    &:hover{
-        background-color: $color-hover;
-        transition: all 0.5s ease-in;
-        border-radius: 20px;
-        }
+    @include parrafo_varios;
 }
 .n2{
     grid-area: vision;
-    width: 70%;
-    margin: 1rem;
-    text-align: justify;
-    padding:1rem 2rem;
-    &:hover{
-        background-color: $color-hover;
-        transition: all 0.5s ease-in;
-        border-radius: 20px;
-            }
+    @include parrafo_varios;
     }
 .n3{padding:1rem 2rem;
     grid-area: objetivos;
-    width: 70%;
-    margin: auto;
-    text-align: justify;
-    &:hover{
-        background-color: $color-hover;
-        transition: all 0.5s ease-in;
-        border-radius: 20px; 
-        }
+    @include parrafo_varios;
     }
 h2{
     text-align: center;
     margin: 2rem;
+}
+@media (max-width: 600px){
+        margin: auto;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "mision"
+        "vision"
+        "objetivos";
+        align-items: center;
+        justify-items: center;  
+
 }
 }
 
@@ -106,12 +95,78 @@ h2{
         border-radius: 20px; 
         }
 }
+// estilos de productos
 .productos{
-    width: 85%;
-    margin: auto;
-    margin-top: 3rem;
     color: $font-ppal;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: (1fr 1fr 1fr);
+    grid-template-areas: 
+    "ahorros ahorros ahorros imgahorros imgahorros imgahorros"
+    "imgcredito imgcredito imgcredito credito credito credito"
+    "inversion inversion inversion imginversion imginversion imginversion"
+    ;
+    img{
+        @include imagenes;
+        
+    }
+    .p1{
+        grid-area: ahorros; 
+        @include parrafo_varios;
+    }
+    .p2{
+        grid-area: imgahorros;
+        display: flex; 
+    }
+
+    .p3{
+        grid-area: credito; 
+        @include parrafo_varios;
+    }
+    .p4{
+        grid-area: imgcredito; 
+        display: flex; 
+        
+    }
+    .p5{
+        grid-area: inversion; 
+        @include parrafo_varios;
+    }
+    .p6{
+        grid-area: imginversion;
+        display: flex;  
+
+    }
+    .col-md-7{
+        
+        @include parrafo_varios;
+    }
+
+    @media (max-width: 600px){
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "ahorros"
+        "imgahorros"
+        "credito"
+        "imgcredito"
+        "inversion"
+        "imginversion";
+        
+    
+    }
 }
+// estilos enterate
+.noticias{
+    color: $font-ppal;
+    .not1,.not2 {
+        @include parrafo_varios;
+    }
+
+}
+
+
+
+
 .formulario{
     width: 70%;
     margin: auto;

@@ -37,20 +37,26 @@ main {
   /* definiendo areas */ }
   .nosotros .n1 {
     grid-area: mision;
-    width: 70%;
+    width: 80%;
     margin: auto;
     text-align: justify;
-    padding: 1rem 2rem; }
+    padding: 1rem 2rem;
+    margin-bottom: 2rem; }
+    .nosotros .n1 h2 {
+      text-align: center; }
     .nosotros .n1:hover {
       background-color: #f1f5fa;
       transition: all 0.5s ease-in;
       border-radius: 20px; }
   .nosotros .n2 {
     grid-area: vision;
-    width: 70%;
-    margin: 1rem;
+    width: 80%;
+    margin: auto;
     text-align: justify;
-    padding: 1rem 2rem; }
+    padding: 1rem 2rem;
+    margin-bottom: 2rem; }
+    .nosotros .n2 h2 {
+      text-align: center; }
     .nosotros .n2:hover {
       background-color: #f1f5fa;
       transition: all 0.5s ease-in;
@@ -58,9 +64,13 @@ main {
   .nosotros .n3 {
     padding: 1rem 2rem;
     grid-area: objetivos;
-    width: 70%;
+    width: 80%;
     margin: auto;
-    text-align: justify; }
+    text-align: justify;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem; }
+    .nosotros .n3 h2 {
+      text-align: center; }
     .nosotros .n3:hover {
       background-color: #f1f5fa;
       transition: all 0.5s ease-in;
@@ -68,6 +78,13 @@ main {
   .nosotros h2 {
     text-align: center;
     margin: 2rem; }
+  @media (max-width: 600px) {
+    .nosotros {
+      margin: auto;
+      grid-template-columns: 1fr;
+      grid-template-areas: "mision" "vision" "objetivos";
+      align-items: center;
+      justify-items: center; } }
 
 .ley {
   text-align: justify;
@@ -87,10 +104,96 @@ main {
     border-radius: 20px; }
 
 .productos {
-  width: 85%;
-  margin: auto;
-  margin-top: 3rem;
+  color: #0a557a;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "ahorros ahorros ahorros imgahorros imgahorros imgahorros" "imgcredito imgcredito imgcredito credito credito credito" "inversion inversion inversion imginversion imginversion imginversion"; }
+  .productos img {
+    margin: 2rem auto;
+    justify-content: center;
+    width: 80%;
+    height: 80%;
+    object-fit: contain; }
+  .productos .p1 {
+    grid-area: ahorros;
+    width: 80%;
+    margin: auto;
+    text-align: justify;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem; }
+    .productos .p1 h2 {
+      text-align: center; }
+    .productos .p1:hover {
+      background-color: #f1f5fa;
+      transition: all 0.5s ease-in;
+      border-radius: 20px; }
+  .productos .p2 {
+    grid-area: imgahorros;
+    display: flex; }
+  .productos .p3 {
+    grid-area: credito;
+    width: 80%;
+    margin: auto;
+    text-align: justify;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem; }
+    .productos .p3 h2 {
+      text-align: center; }
+    .productos .p3:hover {
+      background-color: #f1f5fa;
+      transition: all 0.5s ease-in;
+      border-radius: 20px; }
+  .productos .p4 {
+    grid-area: imgcredito;
+    display: flex; }
+  .productos .p5 {
+    grid-area: inversion;
+    width: 80%;
+    margin: auto;
+    text-align: justify;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem; }
+    .productos .p5 h2 {
+      text-align: center; }
+    .productos .p5:hover {
+      background-color: #f1f5fa;
+      transition: all 0.5s ease-in;
+      border-radius: 20px; }
+  .productos .p6 {
+    grid-area: imginversion;
+    display: flex; }
+  .productos .col-md-7 {
+    width: 80%;
+    margin: auto;
+    text-align: justify;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem; }
+    .productos .col-md-7 h2 {
+      text-align: center; }
+    .productos .col-md-7:hover {
+      background-color: #f1f5fa;
+      transition: all 0.5s ease-in;
+      border-radius: 20px; }
+  @media (max-width: 600px) {
+    .productos {
+      grid-template-columns: 1fr;
+      grid-template-areas: "ahorros" "imgahorros" "credito" "imgcredito" "inversion" "imginversion"; } }
+
+.noticias {
   color: #0a557a; }
+  .noticias .not1, .noticias .not2 {
+    width: 80%;
+    margin: auto;
+    text-align: justify;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem; }
+    .noticias .not1 h2, .noticias .not2 h2 {
+      text-align: center; }
+    .noticias .not1:hover, .noticias .not2:hover {
+      background-color: #f1f5fa;
+      transition: all 0.5s ease-in;
+      border-radius: 20px; }
 
 .formulario {
   width: 70%;
@@ -112,3 +215,17 @@ footer {
     grid-template-areas: "ubicacion redes";
     align-items: center;
     justify-items: center; }
+  footer .redes {
+    grid-area: redes;
+    margin: 1rem auto; }
+  footer .ubicacion {
+    grid-area: ubicacion;
+    margin: auto; }
+  @media (max-width: 600px) {
+    footer .pie {
+      display: grid;
+      margin: auto;
+      grid-template-columns: 1fr;
+      grid-template-areas: "ubicacion " "redes";
+      align-items: center;
+      justify-items: center; } }

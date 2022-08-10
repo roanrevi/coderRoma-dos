@@ -14,5 +14,29 @@ footer{
         align-items: center;
         justify-items: center;
     }
+    .redes{
+        grid-area: redes;
+        margin: 1rem auto;
+
+    }
+    .ubicacion{
+        grid-area: ubicacion;
+        margin: auto;
+
+    }
+    @media (max-width: 600px){
+        .pie{
+            display: grid;
+            margin: auto;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+            "ubicacion "
+            "redes" ;
+            align-items: center;
+            justify-items: center;
+        }
+
+    }
+    ;
 }
 

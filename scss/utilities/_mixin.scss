@@ -1,0 +1,27 @@
+@mixin parrafo_varios {
+    width: 80%;
+    margin: auto;
+    text-align: justify;
+    padding:1rem 2rem;
+    margin-bottom: 2rem;
+    h2{
+        text-align: center;
+    }
+    &:hover{
+        background-color: $color-hover;
+        transition: all 0.5s ease-in;
+        border-radius: 20px;
+        }
+    
+}
+@mixin imagenes {
+    margin: 2rem auto; 
+      
+    justify-content: center;
+    width: 80%;
+    height: 80%;
+    object-fit: contain;    
+}
+@mixin tablet{
+    
+}
