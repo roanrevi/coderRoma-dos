@@ -1,3 +1,18 @@
+
+        .sticky{
+        position: sticky;
+        z-index: 1;
+        top:0;
+        }
+        .pagar a{
+            padding: 10px;
+        }
+        .pagar a:hover{
+            background-color: rgb(245, 235, 232);
+            transition: all 0.3s ease-in;
+            border-radius: 30rem;
+        }
+
 main{
     color: #0a557a;
     .actividad{
@@ -23,15 +38,85 @@ main{
     .grid-found{
         display: grid;
         grid-template-columns: repeat(6,1fr);
+        grid-template-rows: 1fr 1fr 1fr 1fr ;
         grid-template-areas: 
-        ". . found found found found";
+        ". image0 found found found found"
+        ". image0 found found found found"
+        ". image0 found found found found"
+        ". image0 found found found found";
     }
+    .found-image{
+    grid-area:image0;
+    }
+    .found-image1{
+        grid-area: image1;
+        }
     .found{
         grid-area: found;
         text-align: justify;
         width: 90%;
     }
 }
+.referidos{
+    position: relative;
+    text-align: center;
+    align-items: center;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Square Peg', cursive;
+    font-family: 'DynaPuff', cursive;
+    img{
+        width: 100%;
+    }
+
+
+}
+.titulo{
+    position: absolute;
+    top: 3rem;
+    left: 25rem;
+    color: white;
+    padding: 2rem;
+    h2{
+        font-weight: bolder;
+        margin-top: 3rem;
+        
+    }
+}
+.texto-ejemplos{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: 
+    rgb(249, 240, 240);
+    
+    p{
+        padding: 1rem;
+        font-weight: bolder;
+        font-size: 1.5rem;
+    }
+    @media (max-width: 600px){
+        p{
+            font-size: small;
+        }
+
+}
+@media (max-width: 400px){
+    p{
+        font-size: x-small;
+        padding: 0.5rem;
+    }
+
+}
+@media (max-width: 330px){
+    p{
+        font-size: xx-small;
+    }
+
+}
+}
+
 /* estilos nosotros */
 .nosotros{
     
